@@ -23,6 +23,12 @@
     </properties>
 
     <dependencies>
+		<!-- Spring-boot actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+		
         <!-- For REST components -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
