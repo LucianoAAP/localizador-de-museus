@@ -1,6 +1,10 @@
 package com.betrybe.museumfinder.exception;
 
-public class MuseumNotFoundException extends Exception {
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class MuseumNotFoundException extends RuntimeException {
 
 	private static final long serialVersionUID = -5820351358936085710L;
 
