@@ -4,7 +4,6 @@ import com.betrybe.museumfinder.dto.MuseumDto;
 import com.betrybe.museumfinder.model.Museum;
 import com.betrybe.museumfinder.service.MuseumServiceInterface;
 import com.betrybe.museumfinder.util.ModelDtoConverter;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
