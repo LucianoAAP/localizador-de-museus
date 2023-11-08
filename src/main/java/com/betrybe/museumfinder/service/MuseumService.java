@@ -42,8 +42,12 @@ public class MuseumService implements MuseumServiceInterface {
   
   @Override
   public Museum getMuseum(Long id) {
-    // TODO Auto-generated method stub
-    return null;
+    try {
+      Optional<Museum> museum = museumFakeDatabase.getMuseum(id);
+      return museum.get();
+    } catch (NoSuchElementException e) {
+      throw new MuseumNotFoundException("Museu não encontrado!");
+    }
   }
 
 }

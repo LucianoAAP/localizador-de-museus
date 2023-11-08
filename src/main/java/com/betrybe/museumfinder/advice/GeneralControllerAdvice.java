@@ -1,11 +1,11 @@
 package com.betrybe.museumfinder.advice;
 
+import com.betrybe.museumfinder.exception.InvalidCoordinateException;
+import com.betrybe.museumfinder.exception.MuseumNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import com.betrybe.museumfinder.exception.InvalidCoordinateException;
-import com.betrybe.museumfinder.exception.MuseumNotFoundException;
 
 /**
  * Controller advice.
@@ -16,7 +16,8 @@ public class GeneralControllerAdvice {
    * Invalid coordinate exception handler.
    */
   @ExceptionHandler({InvalidCoordinateException.class})
-  public ResponseEntity<String> handleInvalidCoordinateException(InvalidCoordinateException exception) {
+  public ResponseEntity<String> handleInvalidCoordinateException(
+      InvalidCoordinateException exception) {
     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Coordenada inválida!");
   }
   
