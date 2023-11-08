@@ -47,6 +47,9 @@ public class MuseumController {
     return ResponseEntity.ok(response);
   }
   
+  /**
+   * Route to get museum by id.
+   */
   @GetMapping(value = "/{id}")
   public ResponseEntity<MuseumDto> getById(@PathVariable Long id) {
     Museum museum = museumService.getMuseum(id);
