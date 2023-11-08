@@ -11,6 +11,10 @@ public class InvalidCoordinateException extends RuntimeException {
 
   private static final long serialVersionUID = 184603409587310457L;
   
+  public InvalidCoordinateException() {
+    
+  }
+  
   public InvalidCoordinateException(String message) {
     super(message);
   }

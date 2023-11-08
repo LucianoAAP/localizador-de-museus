@@ -11,6 +11,10 @@ public class MuseumNotFoundException extends RuntimeException {
 
   private static final long serialVersionUID = -5820351358936085710L;
   
+  public MuseumNotFoundException() {
+    
+  }
+  
   public MuseumNotFoundException(String message) {
     super(message);
   }

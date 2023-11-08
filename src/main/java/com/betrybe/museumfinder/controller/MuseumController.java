@@ -39,9 +39,9 @@ public class MuseumController {
   @GetMapping(value = "/closest")
   public ResponseEntity<MuseumDto> getClosestMuseum(
       @RequestParam(name = "lat") Double lat, @RequestParam(name = "lng") Double lng,
-      @RequestParam(name = "max_dist_km") Double max_dist_km) {
+      @RequestParam(name = "max_dist_km") Double maxDistKm) {
     Coordinate coordinate = new Coordinate(lat, lng);
-    Museum museum = museumService.getClosestMuseum(coordinate, max_dist_km);
+    Museum museum = museumService.getClosestMuseum(coordinate, maxDistKm);
     MuseumDto response = ModelDtoConverter.modelToDto(museum);
     return ResponseEntity.ok(response);
   }
