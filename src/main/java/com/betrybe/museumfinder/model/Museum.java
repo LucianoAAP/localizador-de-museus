@@ -13,7 +13,7 @@ public class Museum {
   private String url;
   private Coordinate coordinate;
   private Long legacyId;
-  	
+
   public Long getId() {
     return id;
   }

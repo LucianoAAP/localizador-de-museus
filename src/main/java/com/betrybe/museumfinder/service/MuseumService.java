@@ -7,13 +7,14 @@ import com.betrybe.museumfinder.model.Coordinate;
 import com.betrybe.museumfinder.model.Museum;
 import com.betrybe.museumfinder.util.CoordinateUtil;
 
-
 import java.util.Optional;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * Museum service.
+ */
 @Service
 public class MuseumService implements MuseumServiceInterface {
   @Autowired
@@ -28,8 +29,8 @@ public class MuseumService implements MuseumServiceInterface {
     if (museum == null) {
       throw new MuseumNotFoundException("Museu não encontrado!");
     }
-      return museum.get();
-    }
+    return museum.get();
+  }
   
   @Override
   public Museum createMuseum(Museum museum) {
