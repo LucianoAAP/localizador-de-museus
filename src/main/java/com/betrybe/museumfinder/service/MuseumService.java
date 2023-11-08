@@ -6,6 +6,7 @@ import com.betrybe.museumfinder.exception.MuseumNotFoundException;
 import com.betrybe.museumfinder.model.Coordinate;
 import com.betrybe.museumfinder.model.Museum;
 import com.betrybe.museumfinder.util.CoordinateUtil;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,11 +24,12 @@ public class MuseumService implements MuseumServiceInterface {
     if (!CoordinateUtil.isCoordinateValid(coordinate)) {
       throw new InvalidCoordinateException("Coordenada inválida!");
     }
-    Optional<Museum> museum = museumFakeDatabase.getClosestMuseum(coordinate, maxDistance);
-    if (museum == null) {
+    try {      
+      Optional<Museum> museum = museumFakeDatabase.getClosestMuseum(coordinate, maxDistance);
+      return museum.get();
+    } catch (NoSuchElementException e) {
       throw new MuseumNotFoundException("Museu não encontrado!");
     }
-    return museum.get();
   }
   
   @Override
