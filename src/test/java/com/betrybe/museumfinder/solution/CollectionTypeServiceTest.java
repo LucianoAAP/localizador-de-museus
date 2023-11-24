@@ -2,6 +2,7 @@ package com.betrybe.museumfinder.solution;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class CollectionTypeServiceTest {
   private MuseumFakeDatabase database;
 
   @Test
+  @DisplayName("Deve retornar o valor correto para o parâmetro 'história'")
   void testHist() {
     String[] collectionTypes = new String[] { "história" };
     CollectionTypeCount collectionTypeCountMock = new CollectionTypeCount(collectionTypes, 1L);
@@ -34,6 +36,7 @@ public class CollectionTypeServiceTest {
   }
   
   @Test
+  @DisplayName("Deve retornar o valor correto para o parâmetro 'hist,imag'")
   void testHistImag() {
     String[] collectionTypes = new String[] { "hist", "imag" };
     CollectionTypeCount collectionTypeCountMock = new CollectionTypeCount(collectionTypes, 30L);
@@ -51,6 +54,7 @@ public class CollectionTypeServiceTest {
   }
   
   @Test
+  @DisplayName("Deve retornar o valor correto para um parâmetro que não existe")
   void testNotFound() {
     String[] collectionTypes = new String[] { "xablau" };
     CollectionTypeCount collectionTypeCountMock = new CollectionTypeCount(collectionTypes, 0);

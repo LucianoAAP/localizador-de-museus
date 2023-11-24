@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,7 @@ public class GetMuseumByIdServiceTest {
   private MuseumFakeDatabase database;
 
   @Test
+  @DisplayName("Deve retornar o resultado correto")
   void test() {
     Museum museumMock = TestHelpers.createMockMuseum(1L);
     Optional<Museum> optionalMuseumMock = Optional.of(museumMock);
@@ -46,6 +49,7 @@ public class GetMuseumByIdServiceTest {
   }
 
   @Test
+  @DisplayName("Deve lançar exceção quando nada for encontrado")
   void testNotFound() {
     Optional<Museum> optionalMuseumMock = Optional.empty();
     

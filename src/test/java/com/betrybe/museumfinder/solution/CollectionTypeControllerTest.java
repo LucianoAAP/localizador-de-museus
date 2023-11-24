@@ -1,5 +1,6 @@
 package com.betrybe.museumfinder.solution;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,7 @@ public class CollectionTypeControllerTest {
   private CollectionTypeService service;
 
   @Test
+  @DisplayName("Deve retornar o resultado correto para o parâmetro 'história'")
   void testHist() throws Exception {
     String[] collectionTypes = new String[] { "história" };
     CollectionTypeCount collectionTypeCountMock = new CollectionTypeCount(collectionTypes, 1L);
@@ -43,6 +45,7 @@ public class CollectionTypeControllerTest {
   }
   
   @Test
+  @DisplayName("Deve retornar o resultado correto para o parâmetro 'hist,imag'")
   void testHistImag() throws Exception {
     String[] collectionTypes = new String[] { "hist", "imag" };
     CollectionTypeCount collectionTypeCountMock = new CollectionTypeCount(collectionTypes, 237L);
@@ -59,6 +62,7 @@ public class CollectionTypeControllerTest {
   }
   
   @Test
+  @DisplayName("Deve retornar 404 quando nada for encontrado")
   void testNotFound() throws Exception {
     String[] collectionTypes = new String[] { "xablau" };
     CollectionTypeCount collectionTypeCountMock = new CollectionTypeCount(collectionTypes, 0);

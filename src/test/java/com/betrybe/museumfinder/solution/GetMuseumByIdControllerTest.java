@@ -5,6 +5,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,7 @@ public class GetMuseumByIdControllerTest {
   private MuseumService service;
 
   @Test
+  @DisplayName("Deve retornar o resultado correto")
   void test() throws Exception {
     Museum museumMock = TestHelpers.createMockMuseum(1L);
     
@@ -46,6 +48,7 @@ public class GetMuseumByIdControllerTest {
   }
 
   @Test
+  @DisplayName("Deve retornar 404 quando nada for encontrado")
   void testNotFound() throws Exception {
     Mockito.when(service.getMuseum(237L))
       .thenThrow(new MuseumNotFoundException("Museu não encontrado!"));
