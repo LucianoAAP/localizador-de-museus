@@ -6,6 +6,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Map;
 
+/**
+ * Created by Trybe to help the students in the creation of the tests.
+ */
 public class TestHelpers {
 
   public static Map<?, ?> objectToMap(Object obj) {

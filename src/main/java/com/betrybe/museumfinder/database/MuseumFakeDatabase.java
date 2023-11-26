@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Component;
 
 /**
- * Class that simulates a fake database/repository.
+ * Class that simulates a fake database/repository (Created by Trybe).
  */
 @Component
 public class MuseumFakeDatabase {

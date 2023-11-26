@@ -11,7 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 /**
- * Helper class that load a list of objects.
+ * Helper class that load a list of objects (created by Trybe).
  */
 @Component
 public class MuseumLoader {

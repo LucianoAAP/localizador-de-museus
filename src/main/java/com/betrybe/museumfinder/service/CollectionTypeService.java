@@ -5,7 +5,7 @@ import com.betrybe.museumfinder.dto.CollectionTypeCount;
 import org.springframework.stereotype.Service;
 
 /**
- * CollectionType service class.
+ * CollectionType service class (created by Trybe for the students to create the tests).
  */
 @Service
 public class CollectionTypeService {

@@ -5,7 +5,7 @@ import com.betrybe.museumfinder.dto.MuseumDto;
 import com.betrybe.museumfinder.model.Museum;
 
 /**
- * Utility class to convert between model and dto.
+ * Utility class to convert between model and dto (created by Trybe).
  */
 public class ModelDtoConverter {
 

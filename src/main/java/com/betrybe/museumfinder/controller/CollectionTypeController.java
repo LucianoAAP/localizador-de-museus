@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * CollectionType controller class.
+ * CollectionType controller class (created by Trybe for the students to create the tests).
  */
 @RestController
 @RequestMapping("/collections")

@@ -3,7 +3,7 @@ package com.betrybe.museumfinder.util;
 import com.betrybe.museumfinder.model.Coordinate;
 
 /**
- * Util class to calculate distance between coordinates.
+ * Util class to calculate distance between coordinates (created by Trybe).
  */
 public class CoordinateUtil {
 
